@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margenmain">25dp</dimen>
+    <dimen name="paddinglados">50dp</dimen>
+    <dimen name="titulomain">30sp</dimen>
+    <dimen name="tamanoimagen">120dp</dimen>
+    <dimen name="spiner">38dp</dimen>
+</resources>

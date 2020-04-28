@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.AlarmaFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_80sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/llprimero"
+                android:background="@color/gris">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/ibAlarma"
+                        android:layout_width="@dimen/_92sdp"
+                        android:layout_height="@dimen/_92sdp"
+                        android:background="@drawable/reloj"
+                        android:scaleX="1.2"
+                        android:scaleY="1.2"
+                        android:layout_margin="@dimen/_10sdp"/>
+
+                    <ImageButton
+                        android:layout_width="@dimen/_92sdp"
+                        android:layout_height="@dimen/_92sdp"
+                        android:id="@+id/ibCantidad"
+                        android:scaleY="1.1"
+                        android:scaleX="1.1"
+                        android:background="@drawable/cantidad"
+                        android:layout_margin="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llAlarma"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TimePicker
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:timePickerMode="spinner"
+                        android:id="@+id/tpAlarma"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llCantidad"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hintspcant"
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_marginLeft="@dimen/_5sdp"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spCantidad"
+                        android:entries="@array/cantidad"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/llsegundo"
+                android:layout_below="@id/llprimero"
+                android:background="@color/gris">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="@dimen/_92sdp"
+                        android:layout_height="@dimen/_92sdp"
+                        android:id="@+id/ibNombre"
+                        android:scaleY="1.1"
+                        android:scaleX="1.1"
+                        android:background="@drawable/nombre2"
+                        android:layout_margin="@dimen/_10sdp"/>
+
+                    <ImageButton
+                        android:layout_width="@dimen/_92sdp"
+                        android:layout_height="@dimen/_92sdp"
+                        android:id="@+id/ibFreq"
+                        android:background="@drawable/frecuencia"
+                        android:layout_margin="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:id="@+id/llNombre">
+
+                    <EditText
+                        android:id="@+id/etNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Nombre de la pastilla"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:id="@+id/llFreq">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hintspinner"
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_marginLeft="@dimen/_5sdp"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spFrecuencia"
+                        android:entries="@array/frecuencia"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_15sdp"
+                        android:id="@+id/vColor"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spColor"
+                        android:entries="@array/colores"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:textSize="@dimen/_20ssp"
+                android:text="ENVIAR"
+                android:layout_marginTop="@dimen/_100sdp"
+                android:layout_marginBottom="@dimen/margenmain"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/btEnviar"
+                android:background="@color/azul"
+                android:textColor="@color/blanco"
+                android:layout_below="@id/llsegundo"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
